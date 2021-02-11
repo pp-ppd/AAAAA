@@ -1,0 +1,53 @@
+#include <iostream>
+int main(){   
+    // int a = 10;
+    // int b = 6;
+     
+    // int *p = 0;     // указатель
+    // std::cout << "p value=" << &p << std::endl; 
+    // int *&pRef = p;     // ссылка на указатель
+    // pRef = &a;          // через ссылку указателю p присваивается адрес переменной a
+    // std::cout << "p value=" << *p << std::endl;   // 10
+    // *pRef = 70;         // изменяем значение по адресу, на который указывает указатель
+    // std::cout << "a value=" << a << std::endl;    // 70
+     
+    // pRef = &b;          // изменяем адрес, на который указывает указатель
+    // std::cout << "p value=" << &p << std::endl;   // 6
+    int a = 9;
+    char c = 'N';
+    char *pc = &c;
+         *pc = 'b';  
+   char  *pv;
+   void *pint = (void *)pc;
+   
+   int *pa; 
+   pa = &a;
+   std::cout << "1. *pa value=&a " << pa << std::endl; 
+   std::cout << "a value= " << a << std::endl;   // 6
+   
+   int *ppa, *ppa2;
+   *&ppa = pa;
+   ppa2 = pa;
+   std::cout << "2. *ppa value=" << ppa << std::endl;   
+   std::cout << "pa value=" << ppa2 << std::endl;   // 6
+   
+   int *Pppa;
+   *&Pppa = ppa +1;
+   std::cout << "3. *Pppa value=" << Pppa << std::endl;   // 6
+   std::cout << "ppa value=" << ppa << std::endl;   // 6
+   
+   
+   std::cout << "-----------------" << *pa << std::endl;   // 6
+   std::cout << "Pppa value=" << *Pppa << std::endl;   // 6
+   
+   
+   
+//   std::cout << "int value=" << pint << std::endl;   // 2
+//   //std::cout << "int value=" << *pint << std::endl;   // 12
+//     std::cout << "p value=" << *(int *)pc << std::endl;   // 6
+//   std::cout << " value=" << *pc << std::endl;   // 6
+//   std::cout << " value=" << c << std::endl;   // 6
+//     printf("Hello World");
+
+    return 0;
+}
